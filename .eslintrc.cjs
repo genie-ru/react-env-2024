@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:storybook/recommended',
   ],
   overrides: [
     {
@@ -28,4 +29,8 @@ module.exports = {
   rules: {
     'react/react-in-jsx-scope': 'off',
   },
+  settings: {
+    react: { version: 'detect' }, // 追加
+  },
+  ignorePatterns: ['.storybook/main.ts', '.storybook/preview.ts'], // ここに追加
 };
